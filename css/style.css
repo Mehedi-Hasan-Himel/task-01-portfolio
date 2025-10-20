@@ -50,6 +50,7 @@ body {
 .container {
   width: var(--container-width-lg);
   margin: 0 auto;
+  padding-top: 3rem;
 }
 
 h1,
@@ -159,10 +160,10 @@ img {
 
 /*  ============== CTA Start ============== */
 .cta {
-  margin-top: 2.5rem;
   display: flex;
-  gap: 1.2rem;
   justify-content: center;
+  margin-top: 2.5rem;
+  gap: 1.2rem;
 }
 /*  ============== CTA End ============== */
 
@@ -176,7 +177,16 @@ img {
   left: 0;
   bottom: 3rem;
 }
+.fa-brands {
+  font-size: 24px;
+}
 .header__social::after {
+  content: "";
+  width: 1px;
+  height: 2rem;
+  background: var(--color-primary);
+}
+.header__social::before {
   content: "";
   width: 1px;
   height: 2rem;
@@ -236,5 +246,48 @@ img {
   .me {
     width: 90%;
   }
+  .header__social {
+    display: none;
+  }
+  .scroll__down {
+    display: none;
+  }
 }
 /* Header Section CSS End */
+
+/* Nav Section CSS Start */
+nav {
+  background: rgba(0, 0, 0, 0.3);
+  /* width: max-content; */
+  display: block;
+  padding: 0.7rem 1.7rem;
+  z-index: 2;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2rem;
+  display: flex;
+  gap: 0.8rem;
+  border-radius: 3rem;
+  backdrop-filter: blur(1rem);
+}
+
+nav a {
+  background: transparent;
+  padding: 0.9rem;
+  border-radius: 50%;
+  display: flex;
+  /* color: var(--color-light); */
+  font-size: 1.1rem;
+}
+
+nav a:hover {
+  /* background: rgba(0, 0, 0, 0.4); */
+  background: var(--color-primary);
+}
+
+nav a.active {
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
+/* Nav Section CSS End */
