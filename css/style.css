@@ -696,13 +696,18 @@ nav a.active {
 }
 /* ======== Media Query Styles Start (Medium Devices) ======== */
 @media screen and (max-width: 1024px) {
-  testimonials__container {
+  .testimonials__section{
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .testimonials__container {
     width: 60%;
   }
 }
 /* ======== Media Query Styles Start (Small Devices) ======== */
 @media screen and (max-width: 600px) {
-  testimonials__container {
+  .testimonials__container {
     width: var(--container-width-sm);
   }
   .client__review {
@@ -717,7 +722,7 @@ nav a.active {
 
 /* Contact Section CSS Start */
 .container.contact__container {
-  width: 60%;
+  width: 80%;
   display: grid;
   grid-template-columns: 38% 50%;
   gap: 12%;
