@@ -425,13 +425,15 @@ nav a.active {
 .experience__container > div {
   background: var(--color-bg-variant);
   padding: 2rem;
+  border: 1px solid transparent;
   border-radius: 2rem;
-  border: transparent;
+  /* border: transparent; */
   cursor: progress;
   transition: var(--transition);
 }
 
 .experience__container > div:hover {
+  border-color: var(--color-primary-variant);
   /* background: var(--color-light); */
   background: linear-gradient(
     60deg,
@@ -439,7 +441,7 @@ nav a.active {
     var(--color-primary-variant),
     transparent
   );
-  border-color: var(--color-primary-variant);
+  /* border-color: var(--color-primary-variant); */
 }
 .experience__container > div:hover h3 {
   color: var(--color-white);
@@ -460,7 +462,7 @@ nav a.active {
   gap: 1rem;
 }
 
-.experience__details-icon {
+.experience__details > i {
   margin-top: 6px;
   color: var(--color-primary);
 }
@@ -509,3 +511,284 @@ nav a.active {
   }
 }
 /* Experience Section CSS End */
+
+/* Services Section CSS Start */
+.services__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+.services {
+  background: var(--color-bg-variant);
+  border-radius: 0 0 2rem 2rem;
+  border: 3px solid var(--color-primary);
+  height: fit-content;
+  transition: var(--transition);
+}
+.services:hover {
+  /* background: var(--color-light); */
+  background: linear-gradient(
+    60deg,
+    transparent,
+    var(--color-primary-variant),
+    transparent
+  );
+  /* border-color: var(--color-primary-variant); */
+  cursor: progress;
+}
+
+.services__head {
+  background: var(--color-primary);
+  padding: 2rem;
+  border-radius: 0 0 2rem 2rem;
+  /* box-shadow: 0 2rem 1rem rgba(0, 0, 0, 0.1); */
+}
+
+.services__head h3 {
+  color: var(--color-bg);
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.service__list {
+  padding: 2rem;
+}
+.service__list li {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+.service__list > li > i {
+  color: var(--color-primary);
+  margin-top: 4px;
+  font-size: 1rem;
+}
+.service__list p {
+  font-size: 0.9rem;
+}
+
+/* ======== Media Query Styles Start (Medium Devices) ======== */
+@media screen and (max-width: 1024px) {
+  .services__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .services {
+    height: auto;
+  }
+}
+/* ======== Media Query Styles Start (Small Devices) ======== */
+@media screen and (max-width: 600px) {
+  .services__container {
+    grid-template-columns: 1fr;
+    width: 80vw;
+    gap: 1.5rem;
+  }
+}
+/* Services Section CSS End */
+
+/* Portfolio Section CSS Start */
+.portfolio__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+.portfolio__item {
+  background: var(--color-bg-variant);
+  padding: 1.3rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+.portfolio__item:hover {
+  border-color: var(--color-primary-variant);
+  background: linear-gradient(
+    45deg,
+    transparent,
+    var(--color-primary-variant),
+    transparent
+  );
+}
+
+.portfolio__item-image {
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+.portfolio__item h3 {
+  margin: 1.2rem 0 2rem;
+}
+.portfolio__item-cta {
+  display: flex;
+  gap: 1rem;
+  /* align-items: center;
+   justify-content: space-between; */
+  margin-bottom: 1rem;
+}
+
+/* ======== Media Query Styles Start (Medium Devices) ======== */
+@media screen and (max-width: 1024px) {
+  .portfolio__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+}
+/* ======== Media Query Styles Start (Small Devices) ======== */
+@media screen and (max-width: 600px) {
+  .portfolio__container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* ======== Media Query Styles Start (Smallest Devices) ======== */
+@media screen and (max-width: 400px) {
+}
+/* Portfolio Section CSS End */
+
+/* Testimonials Section CSS Start */
+.testimonials__section{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.testimonials__container {
+  width: 30%;
+  padding-bottom: 4rem;
+}
+.client__avatar {
+  width: 4rem;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  border: 0.4rem solid var(--color-primary-variant);
+}
+
+.testimonials {
+  background: var(--color-bg-variant);
+  text-align: center;
+  padding: 2rem;
+  border-radius: 2rem;
+  user-select: none;
+}
+.testimonials__text{
+  text-align: center;
+}
+.testimonials__text h5{
+   color: var(--color-light);
+}
+.testimonials__text h2{
+   color: var(--color-primary);
+}
+.client__review {
+  color: var(--color-light);
+  font-weight: 300;
+  display: block;
+  width: 90%;
+  margin: 0.8rem auto 0;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  background: var(--color-primary);
+  cursor: pointer;
+  padding: 0.4rem;
+}
+/* ======== Media Query Styles Start (Medium Devices) ======== */
+@media screen and (max-width: 1024px) {
+  testimonials__container {
+    width: 60%;
+  }
+}
+/* ======== Media Query Styles Start (Small Devices) ======== */
+@media screen and (max-width: 600px) {
+  testimonials__container {
+    width: var(--container-width-sm);
+  }
+  .client__review {
+    width: var(--container-width-sm);
+  }
+}
+
+/* ======== Media Query Styles Start (Smallest Devices) ======== */
+@media screen and (max-width: 400px) {
+}
+/* Testimonials Section CSS End */
+
+/* Contact Section CSS Start */
+.container.contact__container {
+  width: 60%;
+  display: grid;
+  grid-template-columns: 38% 50%;
+  gap: 12%;
+}
+.contact__options {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.contact__option {
+  background: var(--color-bg-variant);
+  padding: 1.2rem;
+  border-radius: 1.2rem;
+  text-align: center;
+  border: 1px solid transparent;
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.contact__option:hover {
+  background: transparent;
+  border-color: var(--color-primary-variant);
+}
+.contact__option-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.contact__option a {
+  margin-top: 0.7rem;
+  display: inline-block;
+  font-size: 0.8rem;
+}
+
+/* ================== FORM ==================== */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background: transparent;
+  border: 2px solid var(--color-primary-variant);
+  resize: none;
+  color: var(--color-white);
+}
+
+/* ======== Media Query Styles Start (Medium Devices) ======== */
+@media screen and (max-width: 1024px) {
+  .container.contact__container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+/* ======== Media Query Styles Start (Small Devices) ======== */
+@media screen and (max-width: 600px) {
+  .container.contact__container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* ======== Media Query Styles Start (Smallest Devices) ======== */
+@media screen and (max-width: 350px) {
+  .container.contact__container {
+    width: 90%;
+  }
+}
+/* Contact Section CSS End */
