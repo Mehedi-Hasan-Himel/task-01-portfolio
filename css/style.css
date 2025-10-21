@@ -18,6 +18,7 @@
   --color-bg-variant: #2c2c6c;
   --color-primary: #4db5ff;
   --color-primary-variant: rgba(77, 181, 255, 0.4);
+  --color-primary-variant-2: #15296c;
   --color-white: #fff;
   --color-light: rgba(255, 255, 255, 0.6);
   /* color variables end*/
@@ -207,13 +208,16 @@ img {
 
 /*  ============== ME Start ============== */
 .me {
-  background: linear-gradient(var(--color-primary), transparent);
+  background: linear-gradient(var(--color-primary-variant-2), transparent);
   width: 22rem;
   height: 30rem;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
   margin-top: 4rem;
+  /* display: flex;
+  justify-content: center; */
+  align-items: center;
   border-radius: 12rem 12rem 0 0;
   overflow: hidden;
   padding: 5rem 1.5rem 1.5rem 1.5rem;
@@ -242,9 +246,9 @@ img {
   h1 {
     font-size: 1.9rem;
   }
-  .me {
-    width: 90%;
-  }
+  /* .me {
+    width: 100%;
+  } */
   .header__social {
     display: none;
   }
@@ -300,7 +304,8 @@ nav a.active {
 
 .about__me {
   width: 100%;
-  aspect-ratio: 1/1;
+  height: 76%;
+  /* aspect-ratio: 1/1; */
   border-radius: 2rem;
   background: linear-gradient(
     45deg,
@@ -696,7 +701,7 @@ nav a.active {
 }
 /* ======== Media Query Styles Start (Medium Devices) ======== */
 @media screen and (max-width: 1024px) {
-  .testimonials__section{
+  .testimonials__section {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
@@ -831,7 +836,7 @@ footer a {
   gap: 2rem;
   margin: 0 auto 3rem;
 }
-.permalinks a:hover{
+.permalinks a:hover {
   color: var(--color-primary);
 }
 .footer__socials {
