@@ -647,7 +647,7 @@ nav a.active {
 /* Portfolio Section CSS End */
 
 /* Testimonials Section CSS Start */
-.testimonials__section{
+.testimonials__section {
   display: flex;
   justify-content: center;
   gap: 2rem;
@@ -672,14 +672,14 @@ nav a.active {
   border-radius: 2rem;
   user-select: none;
 }
-.testimonials__text{
+.testimonials__text {
   text-align: center;
 }
-.testimonials__text h5{
-   color: var(--color-light);
+.testimonials__text h5 {
+  color: var(--color-light);
 }
-.testimonials__text h2{
-   color: var(--color-primary);
+.testimonials__text h2 {
+  color: var(--color-primary);
 }
 .client__review {
   color: var(--color-light);
@@ -738,7 +738,12 @@ nav a.active {
 }
 
 .contact__option:hover {
-  background: transparent;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    var(--color-primary-variant),
+    transparent
+  );
   border-color: var(--color-primary-variant);
 }
 .contact__option-icon {
